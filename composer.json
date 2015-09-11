@@ -1,0 +1,20 @@
+{
+  "name": "netjoint/laravel-sms",
+  "description": "SMS Component for Laravel 5 - 第三方短信平台客户端",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "NetJoint Ltd",
+      "email": "netjoint@163.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "laravel/framework": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "NetJoint\\LaravelSms\\": "src/"
+    }
+  }
+}
