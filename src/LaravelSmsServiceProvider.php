@@ -43,7 +43,7 @@ class LaravelSmsServiceProvider extends ServiceProvider
     protected function prepareResources()
     {
         // Publish config
-        $config = realpath(__DIR__.'/../Config/sms.php');
+        $config = realpath(__DIR__.'/config/sms.php');
 
         $this->mergeConfigFrom($config, 'laravel-sms');
 
