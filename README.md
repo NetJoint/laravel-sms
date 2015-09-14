@@ -1,4 +1,4 @@
-## SMS Component for Laravel 5 [简体中文版](README_CN.md)
+## SMS Component for Laravel 5 [简体中文版](README-CN.md)
 
 ### Supported SMS Providers
 
