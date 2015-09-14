@@ -15,6 +15,7 @@
  */
 
 use Illuminate\Support\ServiceProvider;
+use GuzzleHttp\Client as HttpClient;
 
 class LaravelSmsServiceProvider extends ServiceProvider
 {
@@ -63,7 +64,7 @@ class LaravelSmsServiceProvider extends ServiceProvider
             $provider = ucfirst($app['config']->get('laravel-sms.default'));
             $class = "NetJoint\\LaravelSms\\Provider\\$provider";
 
-            return new $class();
+            return new $class(new HttpClient());
         });
     }
 
