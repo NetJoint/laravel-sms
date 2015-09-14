@@ -1,12 +1,12 @@
-## SMS Component for Laravel 5
+## SMS Component for Laravel 5 [简体中文版](README_CN.md)
 
 ### Supported SMS Providers
 
-- Yimei(亿美)
+- [Yimei](http://www.emay.cn/)
 
 ### Installation
 
-Add laravel-sms to your composer.json file
+Add laravel-sms to your `composer.json` file
 
 ```
 "require": {
@@ -62,7 +62,7 @@ Add an alias within the `aliases` array found in `config/app.php`:
 
 ### Configuration
 
-Publish the package's config file to `config/` folder
+Publish the package's config file to `config/laravel-sms.php`
 
 ```
 php artisan vendor:publish --provider="NetJoint\LaravelSms\LaravelSmsServiceProvider"
@@ -71,12 +71,12 @@ php artisan vendor:publish --provider="NetJoint\LaravelSms\LaravelSmsServiceProv
 Add the following to your `.env` file
 
 ```
-# Default SMS Provider
+# Default SMS Provider（lowercase）
 SMS_PROVIDER=yimei
 # Serial key for SMS Provider Yimei
-SMS_YIMEI_CDKEY=6SDK-EMY-6688-JDUQM
+SMS_YIMEI_CDKEY=2SDK-EMY-6688-AAAAA
 # Password for SMS Provider Yimei
-SMS_YIMEI_PASSWORD=927603
+SMS_YIMEI_PASSWORD=123456
 ```
 
 ### Usage

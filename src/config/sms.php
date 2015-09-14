@@ -2,27 +2,27 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | 默认短信平台
+    | Default SMS Provider
     |--------------------------------------------------------------------------
     |
-    | 默认短信平台名称
+    | Name of default SMS provider(lowercase).
     |
     */
     'default' => env('SMS_PROVIDER', 'yimei'),
 
     /*
     |--------------------------------------------------------------------------
-    | 各短信平台设置信息
+    | Configuration of each SMS provider.
     |--------------------------------------------------------------------------
     |
-    | 各短信平台设置信息
+    | Configuration of each SMS provider, key is the name of SMS provider.
     |
     */
     'providers' => [
         'yimei' => [
-            // 序列号
+            // Yimei serial number
             'cdkey'    => env('SMS_YIMEI_CDKEY', '2SDK-EMY-6666-AAAAA'),
-            // 密码
+            // Yimei password
             'password' => env('SMS_YIMEI_PASSWORD', '123456')
         ]
     ]
