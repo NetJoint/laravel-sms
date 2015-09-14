@@ -41,19 +41,13 @@ class Yimei implements ProviderInterface
     public function send($mobile, $message)
     {
         $res = $this->httpClient->request(
-            'POST',
-            'http://sdk4rptws.eucp.b2m.cn:8080/sdkproxy/sendsms.action',
-            [
-                'cdkey' => $this->cdkey,
-                'password' => $this->password,
-                'phone' => $mobile,
-                'message' => $message
-            ]
+            'GET',
+            'http://sdk4rptws.eucp.b2m.cn:8080/sdkproxy/sendsms.action?cdkey=' . $this->cdkey . '&password=' . $this->password . '&phone=' . $mobile. '&message=' . $message
         );
 
         //@TODO 使用XML解析器解析返回数据
         if ('200' == $res->getStatusCode()) {
-            return str_contains($res->getBody(), '<error>0</error>');
+            return str_contains($res->getBody()->getContents(), '<error>0</error>');
         }
 
         return false;
